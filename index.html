@@ -49,22 +49,62 @@ body {
   padding: 10px;
   font-size: 13px;
 }
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Right column */
+.column.side {
+  width: 30%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body class="body">
+  <div class="header">
+    <h1>Witaj na mojej stronie!</h1>
+  </div>
 
-<div class="header">
-  <h1>Witaj na mojej stronie!</h1>
-</div>
-
-<div class="topnav">
-  <a href="#">O mnie</a>
-  <a href="#">Galeria</a>
-  <a href="#">Kontakt</a>
-</div>
-
-<div class="footer">
-  <p style="color:grey">Strona stworzona przez Szymona Stusa. Wszelkie prawa zastrzeżone.</p>  
-</div>
+  <div class="topnav">
+    <a href="#">O mnie</a>
+    <a href="#">Galeria</a>
+    <a href="#">Kontakt</a>
+  </div>
+  
+  <div class="row">
+    <div class="column middle">
+        <h2>Główna kolumna</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+      <div class="column side">
+        <h2>Dodatkowa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+      </div>
+  </div>
+    
+    <div class="footer">
+      <p style="color:grey">Strona stworzona przez Szymona Stusa. Wszelkie prawa zastrzeżone.</p>  
+    </div>
 </body>
 </html>
