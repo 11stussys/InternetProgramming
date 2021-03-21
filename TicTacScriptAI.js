@@ -13,13 +13,28 @@ const currentPlayerTurn = () => `Kolej gracza ${currentPlayer}`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 function handleCellPlayed(clickedCell, clickedCellIndex) {
   gameState[clickedCellIndex] = currentPlayer;
   clickedCell.innerHTML = currentPlayer;
 }
 
-function handlePlayerChange() {
+function handlePlayerChange(clickedCellEvent) {
   currentPlayer = currentPlayer === "X" ? "O" : "X";
+  if (currentPlayer=="O"){
+    let cellrandom = getRandomInt(0,9)
+    const clickedCell = clickedCellEvent.target;
+    if (gameState[cellrandom] !== "" || !gameActive) {
+        return;
+    }  
+    handleCellPlayed(clickedCell, cellrandom);
+    handleResultValidation();
+  }
   statusDisplay.innerHTML = currentPlayerTurn();
 }
 
