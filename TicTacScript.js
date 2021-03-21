@@ -9,7 +9,7 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `Gracz ${currentPlayer} wygrał!`;
 const drawMessage = () => `Remis`;
-const currentPlayerTurn = () => `Kolej ${currentPlayer} gracza`;
+const currentPlayerTurn = () => `Kolej gracza ${currentPlayer}`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
