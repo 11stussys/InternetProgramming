@@ -9,8 +9,30 @@ body {
   margin: 0;
   margin-left: 250px;
   margin-right: 250px;
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   background-color: #f1f1f1;
+}
+
+section {
+  text-align: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 50px auto;
+}
+
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+line-height: 100px;
+    font-size: 60px;
 }
 
 /* Header style */
@@ -74,7 +96,7 @@ body {
     <a href="tictactoe.html">Kółko i krzyżyk</a>
   </div>
   <section>
-        <div class="game--container">
+        <div class="game">
             <div data-cell-index="0" class="cell"></div>
             <div data-cell-index="1" class="cell"></div>
             <div data-cell-index="2" class="cell"></div>
@@ -86,7 +108,7 @@ body {
             <div data-cell-index="8" class="cell"></div>
         </div>
         <h2 class="game--status"></h2>
-        <button class="game--restart">Restart Game</button>
+        <button class="game--restart">Restart</button>
     </section>
     <script src="script.js"></script> 
     
