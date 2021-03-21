@@ -26,15 +26,6 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 
 function handlePlayerChange(clickedCellEvent) {
   currentPlayer = currentPlayer === "X" ? "O" : "X";
-  if (currentPlayer=="O"){
-    let cellrandom = getRandomInt(0,9)
-    const clickedCell = clickedCellEvent.target;
-    if (gameState[cellrandom] !== "" || !gameActive) {
-        return;
-    }  
-    handleCellPlayed(clickedCell, cellrandom);
-    handleResultValidation();
-  }
   statusDisplay.innerHTML = currentPlayerTurn();
 }
 
@@ -81,11 +72,21 @@ function handleResultValidation() {
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+  if (currentPlayer=="O"){
+    let cellrandom = getRandomInt(0,9)
+    if (gameState[cellrandom] !== "" || !gameActive) {
+        return;
+    }  
+    handleCellPlayed(clickedCell, cellrandom);
+    handleResultValidation();
+  }
+  else{
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
     }  
     handleCellPlayed(clickedCell, clickedCellIndex);
     handleResultValidation();
+  }
 }
 
 function handleRestartGame() {
