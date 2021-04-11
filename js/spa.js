@@ -10,7 +10,7 @@ const app = {
         document.querySelectorAll('.nav-link').forEach((link)=>{
             link.addEventListener('click', app.nav);
         })
-        history.replaceState({}, 'Witaj na mojej stronie!', '#home');
+        history.replaceState({}, '#', '#home');
         window.addEventListener('popstate', app.poppin);
     },
     nav: function(ev){
