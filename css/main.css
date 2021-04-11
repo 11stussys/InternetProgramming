@@ -71,12 +71,12 @@ line-height: 100px;
 
 /* Right column */
 .column.side {
-  width: 100%;
+  width: 30%;
 }
 
 /* Middle column */
 .column.middle {
-  width: 100%;
+  width: 60%;
 }
 
 /* Clear floats after the columns */
@@ -94,11 +94,11 @@ line-height: 100px;
     }
   } 
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .column.middle {
-    width: 60%;
+    width: 100%;
     }
   .column.side {
-    width: 30%;
+    width: 100%;
     }
   }
