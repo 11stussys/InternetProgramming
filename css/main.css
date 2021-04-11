@@ -92,6 +92,10 @@ line-height: 100px;
     .topnav a {
       float: left;
     }
+    body {
+      margin-left: 0;
+      margin-right: 0;
+    }
   } 
 
 @media screen and (max-width: 480px) {
