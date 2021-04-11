@@ -48,6 +48,9 @@ line-height: 100px;
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
+  @media screen and (max-width: 640px) {
+    float: center;
+  } 
 }
 
 /* Color on hover */
@@ -92,9 +95,5 @@ line-height: 100px;
   .column.side, .column.middle {
     width: 100%;
   }
-@media screen and (max-width: 640px) {
-    .topnav a {
-  float: center;
-}
   }
 }
