@@ -8,28 +8,62 @@
 <meta name="viewport" content="width=device-width">
 </head>
 <body class="body">
-  <div class="header">
-    <h1>Witaj na mojej stronie!</h1>
-  </div>
-
-  <div class="topnav">
-    <a href="index.html">Strona główna</a>
-    <a href="#">Galeria</a>
-    <a href="#">Kontakt</a>
-    <a href="tictactoe.html">Kółko i krzyżyk</a>
-  </div>
-  
-  <div class="row">
-    <div class="column middle">
-        <h2>Główna kolumna</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    </div>
-      <div class="column side">
-        <h2>Dodatkowa</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  <main>
+    <div class="page active" id="home">
+      <div class="header">
+        <h1>Witaj na mojej stronie!</h1>
       </div>
-  </div>
+
+      <div class="topnav">
+        <a href="index.html">Strona główna</a>
+        <a href="#">Galeria</a>
+        <a href="#">Kontakt</a>
+        <a href="tictactoe.html">Kółko i krzyżyk</a>
+      </div>
+
+      <div class="row">
+        <div class="column middle">
+            <h2>Główna kolumna</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+        <div class="column side">
+            <h2>Dodatkowa</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page" id="tictac">
+      <div class="header">
+        <h1>Kółko i krzyżyk</h1>
+      </div>
+
+      <div class="topnav">
+        <a href="index.html">Strona główna</a>
+        <a href="#">Galeria</a>
+        <a href="#">Kontakt</a>
+        <a href="tictactoe.html">Kółko i krzyżyk</a>
+      </div>
+      <section>
+        <div class="game">
+            <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div>
+        </div>
+        <h2 class="game--status"></h2>
+        <button class="game--restart">Restart</button>
+      </section>
+      <script src="js/TicTacScript.js"></script> 
+    </div>
+    
+  </main>  
     
     <div class="footer">
       <p style="color:grey">Strona stworzona przez Szymona Stusa. Wszelkie prawa zastrzeżone.</p>  
