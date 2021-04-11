@@ -88,14 +88,6 @@ line-height: 100px;
 
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 480px) {
-  .column.middle {
-    width: 60%;
-    }
-  .column.side {
-    width: 30%;
-    }
-  }
 @media screen and (min-width: 640px) {
     .topnav a {
       float: center;
@@ -104,4 +96,12 @@ line-height: 100px;
       background-color: black;
     }
   } 
-}
+
+@media screen and (min-width: 480px) {
+  .column.middle {
+    width: 60%;
+    }
+  .column.side {
+    width: 30%;
+    }
+  }
