@@ -38,6 +38,7 @@ line-height: 100px;
 .topnav {
   overflow: hidden;
   background-color: #333;
+  text-align: center;
 }
 
 /* Topnav links style */
